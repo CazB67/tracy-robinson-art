@@ -10,10 +10,11 @@ const workStyle = {
     marginTop: "30px",
     minHeight: "32px",
     textDecoration: "none",
-    textAlign: "center"
+    textAlign: "center",
+    color: "#2c387e",
   },
   description: {
-    color: "#999",
+    color: "#2c387e",
     textAlign: "center"
   },
   textCenter: {
@@ -21,7 +22,8 @@ const workStyle = {
   },
   textArea: {
     marginRight: "15px",
-    marginLeft: "15px"
+    marginLeft: "15px",
+    color: "#2c387e"
   }
 };
 
