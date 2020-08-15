@@ -15,7 +15,7 @@ export default function ProductSection() {
   return (
     <div className={classes.section}>
       <GridContainer>
-      <GridItem xs={12} sm={12} md={12}><h2 className={classes.title}>ABOUT ME</h2></GridItem>
+      <GridItem id="about" xs={12} sm={12} md={12}><h2 className={classes.title}>ABOUT ME</h2></GridItem>
         <GridItem xs={12} sm={12} md={6}>
           <img className={classes.image} src={profilepic} alt="artist" width="90%"/>
         </GridItem>

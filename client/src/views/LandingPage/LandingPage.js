@@ -19,7 +19,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+//import WorkSection from "./Sections/WorkSection.js";
 
 const dashboardRoutes = [];
 

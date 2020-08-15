@@ -20,19 +20,19 @@ export default function WorkSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>CONTACT ME</h2>
+          <h2 id="contact" className={classes.title}>CONTACT ME</h2>
           <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
+            I'd love to hear from you. Please don't hesitate to contact me if you have any questions. I can also be contacted directly by phone: <span style={{fontWeight:"bold"}}>0433903488</span> or email: <span style={{fontWeight:"bold"}}>bear.111@bigpond.com</span> 
           </h4>
-          <form>
+          <form action="https://formspree.io/mbjzyvba" method="POST">
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
+                  required
                   labelText="Your Name"
                   id="name"
+                  name="name"
+                  type="text"
                   formControlProps={{
                     fullWidth: true
                   }}
@@ -40,16 +40,22 @@ export default function WorkSection() {
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
+                  required
                   labelText="Your Email"
                   id="email"
+                  type="text"
+                  name="_replyto"
                   formControlProps={{
                     fullWidth: true
                   }}
                 />
               </GridItem>
               <CustomInput
+                required
                 labelText="Your Message"
                 id="message"
+                name="message"
+                type="text"
                 formControlProps={{
                   fullWidth: true,
                   className: classes.textArea
@@ -60,7 +66,7 @@ export default function WorkSection() {
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
-                <Button color="primary">Send Message</Button>
+                <Button color="primary" type="submit" value="Submit">Send Message</Button>
               </GridItem>
             </GridContainer>
           </form>
