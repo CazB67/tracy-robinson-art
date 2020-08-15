@@ -30,7 +30,7 @@ const productStyle = {
     height: "100%",
     lineHeight: "41px",
     fontSize: "20px",
-    color: "#999"
+    color: "#2c387e",
   },
 };
 
