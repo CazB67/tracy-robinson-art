@@ -10,11 +10,11 @@ import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
-import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/contactStyle.js";
 
 const useStyles = makeStyles(styles);
 
-export default function WorkSection() {
+export default function ContactSection() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
@@ -25,33 +25,38 @@ export default function WorkSection() {
             I'd love to hear from you. Please don't hesitate to contact me if you have any questions. I can also be contacted directly by phone: <span style={{fontWeight:"bold"}}>0433903488</span> or email: <span style={{fontWeight:"bold"}}>bear.111@bigpond.com</span> 
           </h4>
           <form action="https://formspree.io/mbjzyvba" method="POST">
+          <div className="form-group">
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  required
+                  required="required"
                   labelText="Your Name"
                   id="name"
                   name="name"
                   type="text"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
+                    name:"name",
+                    required:"required"
                   }}
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>
                 <CustomInput
-                  required
+                  required="required"
                   labelText="Your Email"
                   id="email"
                   type="text"
                   name="_replyto"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
+                    name:"_replyto",
+                    required:"required"
                   }}
                 />
               </GridItem>
               <CustomInput
-                required
+                
                 labelText="Your Message"
                 id="message"
                 name="message"
@@ -62,13 +67,15 @@ export default function WorkSection() {
                 }}
                 inputProps={{
                   multiline: true,
-                  rows: 5
+                  rows: 5,
+                  name:"message",
+                  required:"required"
                 }}
               />
               <GridItem xs={12} sm={12} md={4}>
                 <Button color="primary" type="submit" value="Submit">Send Message</Button>
               </GridItem>
-            </GridContainer>
+            </GridContainer></div>
           </form>
         </GridItem>
       </GridContainer>
