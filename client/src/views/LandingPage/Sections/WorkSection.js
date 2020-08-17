@@ -1,78 +1,72 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import GridItem from "components/Grid/GridItem.js";
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
-import { title } from "assets/jss/material-kit-react.js";
-//import tileData from './tileData';
-
+import Typography from '@material-ui/core/Typography';
 import TileData from "components/TileData/TileData.js";
+import GridItem from "components/Grid/GridItem.js";
+import { title } from "assets/jss/material-kit-react.js";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import GridContainer from "components/Grid/GridContainer.js";
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: 500,
-    height: 450,
-  },
-  icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
+    maxWidth: 345,
+    margin: 3,
+    textAlign: "center",
   },
   title: {
     ...title,
     color: "#2c387e",
-    marginBottom: "1rem",
-    marginTop: "30px",
-    minHeight: "32px",
+    marginBottom: "0rem",
+    marginTop: "0px",
+    minHeight: "20px",
     textDecoration: "none",
     textAlign: "center"
   },
+  img: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
+  subtitle: {
+    color: "#2c387e",
+  }
 }));
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 export default function WorkSection() {
   const classes = useStyles();
+
   return (
-    <div className={classes.root}>
-      <GridItem id="about" xs={12} sm={12} md={12}><h2 className={classes.title}>SHOP</h2></GridItem>
-      <GridList cellHeight={180} className={classes.gridList} xs={2} m={4}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-        </GridListTile>
-        {TileData.map((tile) => (
-          <GridListTile key={tile.img}>
-            <img src={tile.img} alt={tile.title} />
-            <GridListTileBar
-              title={tile.title}
-              subtitle={<span>Size: {tile.size} <br></br>Price: {tile.price}</span>}
-        
-              
-            />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
+    
+      <GridContainer justify="center">
+      <GridItem id="shop" xs={12} sm={12} md={12}><h2 className={classes.title}>SHOP</h2></GridItem>
+      {TileData.map((tile) => (
+      <Card className={classes.root} key={tile.key}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt={tile.title}
+       
+          image={tile.img}
+          title={tile.title}
+        />
+        <CardContent>
+          <Typography className={classes.title} gutterBottom variant="h5" component="h2">
+            {tile.title}
+          </Typography>
+          <Typography variant="body2" className={classes.subtitle} component="p">
+            <span>Size: </span>{tile.size}
+          </Typography>
+          <Typography variant="body2" className={classes.subtitle} component="p">
+            <span>Price: </span>{tile.price}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>))}
+    </GridContainer>
+    
   );
 }

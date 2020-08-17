@@ -4,7 +4,6 @@
  import AcaciaBaileyana from './images/AcaciaBaileyana.jpg';
  import BanksiaPhoto from './images/BanksiaPhoto.jpg';
  import Twilight from './images/Twilight.jpg';
- import Whimsical from './images/Whimsical.JPG';
  import wild from './images/wild.jpg';
  import WilsonsGrevillea from './images/WilsonsGrevillea.jpg';
 
@@ -13,43 +12,57 @@
         {
             img: ABunchOfFlowers,
             title: 'A Bunch of Flowers',
-            size: 'author',
-            price: '$340'
+            size: '32 x 344',
+            price: '$340',
+            key: 1,
           },
           {
             img: Blessed,
-            title: 'Image',
+            title: 'Blessed',
             author: 'author',
+            size: '443 x 333',
+            price: '$340',
+            key: 2,
           },
         {
-        img: Whimsical,
-        title: 'Image',
-        author: 'author',
-        },
-        {
     img: BanksiaPhoto,
-    title: 'Image',
+    title: 'Banksia',
     author: 'author',
+    size: 'author',
+            price: '$340',
+    key: 3,
     },
     {
     img: Twilight,
-    title: 'Image',
+    title: 'Twilight',
     author: 'author',
+    size: 'author',
+            price: '$340',
+    key: 4,
     },
     {
     img: wild,
-    title: 'Image',
+    title: 'Wild',
     author: 'author',
+    size: 'author',
+            price: '$340',
+    key: 5,
     },
     {
         img: AcaciaBaileyana,
-        title: 'Image',
+        title: 'Acacia Baileyana',
         author: 'author',
+        size: 'author',
+            price: '$200',
+        key: 6,
         },
         {
             img: WilsonsGrevillea,
-            title: 'Image',
+            title: "Wilson's Grevillea",
             author: 'author',
+            size: 'author',
+            price: '$340',
+            key: 7,
             },
         ];
 
