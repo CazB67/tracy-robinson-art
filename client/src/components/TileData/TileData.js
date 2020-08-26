@@ -5,7 +5,6 @@
  import BanksiaPhoto from './images/BanksiaPhoto.jpg';
  import Twilight from './images/Twilight.jpg';
  import wild from './images/wild.jpg';
- import WilsonsGrevillea from './images/WilsonsGrevillea.jpg';
 
 
     const TileData = [
@@ -56,14 +55,6 @@
             price: '$200',
         key: 6,
         },
-        {
-            img: WilsonsGrevillea,
-            title: "Wilson's Grevillea",
-            author: 'author',
-            size: 'author',
-            price: '$340',
-            key: 7,
-            },
         ];
 
  

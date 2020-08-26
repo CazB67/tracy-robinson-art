@@ -47,7 +47,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={8} elevation={3} style={{backgroundColor:"#2c387e", padding:"30px", borderRadius: "25px"}}>
-              <h1 className={classes.title}>tracy robinson create</h1>
+              <h1 className={classes.title}>Tracy Robinson Create</h1>
               <h4>
                 Imaginary botanicals and floral abstract art based in Fremantle.
               </h4>
