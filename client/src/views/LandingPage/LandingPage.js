@@ -17,7 +17,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
+import BioSection from "./Sections/BioSection.js";
 import ContactSection from "./Sections/ContactSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 import Gallery from "./Sections/Gallery.js";
@@ -57,7 +57,7 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
+          <BioSection />
           <WorkSection/>
           <Gallery/>
           <ContactSection />

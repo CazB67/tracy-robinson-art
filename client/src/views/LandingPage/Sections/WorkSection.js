@@ -101,10 +101,10 @@ export default function WorkSection() {
             <span>Size: </span>{tile.size}
           </Typography>
           <Typography variant="body2" className={classes.subtitle} component="p">
-            <span>Price: </span>{tile.price}
+            <span>Price: </span>${tile.price}
           </Typography>
           <Typography variant="body2" className={classes.subtitle} component="p">
-            <span>Medium: </span>{tile.price}
+            <span>Medium: </span>{tile.medium}
           </Typography>
         </CardContent>
       </CardActionArea>
